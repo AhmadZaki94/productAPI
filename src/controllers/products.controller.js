@@ -33,6 +33,7 @@ router.get('/:id', async(req,res) => {
 router.patch('/:id', async(req,res) => {
     try{
         const product = await Product.findOneAndUpdate({id:req.params.id}, req.body, {new: true}).lean().exec();
+        // console.log(product);
         res.status(200).send(product);
     }catch(err){
         return res.status(500).send({message: err.message});
