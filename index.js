@@ -24,5 +24,5 @@ app.listen(process.env.PORT || 5000, async() => {
     }
     catch(err){
         console.log(err.message);
-    }
+    };
 });
